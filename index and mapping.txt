@@ -1,0 +1,58 @@
+PUT /policy_laoshan
+{
+	"settings":{
+		"number_of_shards": 3,
+		"number_of_replicas": 0
+	},
+	"mappings": {
+		"properties":{
+			"id":{
+				"type":"keyword",
+				"index":true
+					},
+			"create_date":{
+				"type":"date","index":true},
+			"begin_date":{
+				"type":"date",
+				"index":true
+					},
+			"code":{
+				"type":"keyword",
+				"index":true
+					},
+			"end_date":{
+				"type": "date",
+				"index":true
+					},
+			"publish":{
+				"type":"boolean",
+				"index":false
+					},
+			"subject":{
+				"type":"keyword",
+				"index":true
+					},
+			"update_date":{
+				"type":"date",
+				"index":true
+					},
+			"title":{
+				"type":"text",
+				"index":true,
+				"analyzer":"ik_max_word"
+					},
+			"content":{
+				"type":"text",
+				"index":true,
+				"analyzer":"ik_max_word"
+					},
+			"outline":{
+				"type":"text",
+				"index":true,
+				"analyzer":"ik_max_word"
+					}
+		}
+	}
+}
+
+''
